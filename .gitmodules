@@ -7,3 +7,6 @@
 [submodule "bundle/cucumber"]
 	path = bundle/cucumber
 	url = https://github.com/tpope/vim-cucumber.git
+[submodule "bundle/rake"]
+	path = bundle/rake
+	url = git://github.com/tpope/vim-rake.git
