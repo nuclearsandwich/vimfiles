@@ -10,3 +10,6 @@
 [submodule "bundle/rake"]
 	path = bundle/rake
 	url = git://github.com/tpope/vim-rake.git
+[submodule "bundle/markdown"]
+	path = bundle/markdown
+	url = git://github.com/tpope/vim-markdown.git
