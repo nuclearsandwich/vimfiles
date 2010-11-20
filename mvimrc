@@ -2,4 +2,4 @@ colorscheme ir_black
 set guioptions -=T
 set guioptions -=m
 set guioptions -=r
-set guifont=Envy\ Code\ R:h10
+set guifont=Envy\ Code\ R:h12
