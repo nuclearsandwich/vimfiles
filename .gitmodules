@@ -25,3 +25,6 @@
 [submodule "bundle/vimtodo"]
 	path = bundle/vimtodo
 	url = git://github.com/mivok/vimtodo.git
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
