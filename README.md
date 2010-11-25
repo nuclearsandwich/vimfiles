@@ -5,7 +5,7 @@ of them attached as git submodules.
 # Intstalled Plugins #
 
 - [haml.vim](http://github.com/tpope/vim-haml)
-- [rails.vim] (http://github.com/tpope/vim-rails)
+- [rails.vim](http://github.com/tpope/vim-rails)
 - [cucumber.vim](https://github.com/tpope/vim-cucumber)
 -	[rake.vim](http://github.com/tpope/vim-rake)
 - [markdown.vim](http://github.com/tpope/vim-markdown)
