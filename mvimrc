@@ -1,5 +1,7 @@
-colorscheme ir_black
+colorscheme moria
 set guioptions -=T
 set guioptions -=m
 set guioptions -=r
 set guifont=Envy\ Code\ R:h12
+" Test for colorcolumn which is new in Vim 7.3
+set colorcolumn=80
