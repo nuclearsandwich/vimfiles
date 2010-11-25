@@ -21,3 +21,5 @@ let g:EclimEclipseHome = '/usr/share/eclipse'
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 let g:Tex_ViewRule_pdf = '/usr/bin/evince'
+
+nmap <leader>R :RainbowParenthesesToggle<CR>
