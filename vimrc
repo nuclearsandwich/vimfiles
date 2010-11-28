@@ -20,6 +20,6 @@ let g:EclimEclipseHome = '/usr/share/eclipse'
 "LaTeX-suite bindings.
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
-let g:Tex_ViewRule_pdf = '/usr/bin/evince'
+let g:Tex_ViewRule_pdf = '/usr/bin/okular'
 
 nmap <leader>R :RainbowParenthesesToggle<CR>
