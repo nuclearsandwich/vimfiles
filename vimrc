@@ -11,7 +11,7 @@ set splitright
 set splitbelow
 set exrc
 "set t_Co=256
-colorscheme dante
+colorscheme herald
 syntax on
 filetype plugin indent on
 "command -bar -nargs=1 OpenURL :!surf <args>

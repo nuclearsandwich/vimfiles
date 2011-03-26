@@ -1,4 +1,4 @@
-colorscheme molokai
+colorscheme jellybeans
 set guioptions -=m
 set guioptions -=T
 set guioptions -=r
