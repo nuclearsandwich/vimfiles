@@ -7,6 +7,9 @@ set tabstop=2
 set shiftwidth=2
 set noexpandtab
 set background=dark
+set splitright
+set splitbelow
+set exrc
 "set t_Co=256
 colorscheme dante
 syntax on
@@ -21,5 +24,4 @@ let g:EclimEclipseHome = '/usr/share/eclipse'
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 let g:Tex_ViewRule_pdf = '/usr/bin/okular'
-
 nmap <leader>R :RainbowParenthesesToggle<CR>
