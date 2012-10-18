@@ -34,3 +34,6 @@
 [submodule "bundle/latex-suite"]
 	path = bundle/latex-suite
 	url = https://github.com/nuclearsandwich/vim-latex.git
+[submodule "bundle/base16"]
+	path = bundle/base16
+	url = git://github.com/chriskempson/base16-vim.git
