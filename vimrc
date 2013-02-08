@@ -34,8 +34,8 @@ set list
 
 " Some colorscheme tweaks.
 " let base16colorspace = "256"
-colorscheme base16
-set background=dark
+colorscheme fruit
+set background=light
 
 
 syntax on
@@ -45,6 +45,7 @@ filetype plugin indent on
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=1
 let g:syntastic_auto_loc_list=1
+let g:syntastic_mode_map={ 'mode': 'passive' }
 
 "" Eclim bindings.
 "let g:EclimHome = '/usr/share/vim/vimfiles/eclim'
@@ -54,6 +55,10 @@ let g:syntastic_auto_loc_list=1
 set grepprg=grep\ -nH\ $*
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_ViewRule_pdf = '/usr/bin/epdfview'
+
+" finna try out jk => <ESC>
+imap jk <ESC>
+imap kj <ESC>
 
 
 " custom functions
@@ -82,14 +87,17 @@ function! s:VSetSearch()
 	let @s = temp
 endfunction
 
-" Insert a hashrocket with Ctrl+L
+" Insert a arrows with Ctrl+L
 imap <c-l> <space>=><space>
 
 "autocmd BufWritePost * call system("ctags -R")
 autocmd BufRead,BufNewFile *.step set ft=ruby
 autocmd BufRead,BufNewFile *.hamlc set ft=haml
 autocmd FileType ruby setlocal expandtab
+autocmd FileType ruby imap <c-l> <space>=><space>
 autocmd FileType fancy setlocal expandtab
+autocmd FileType coffee setlocal expandtab
+autocmd FileType coffee imap <c-l> <space>-><space>
 autocmd FileType markdown setlocal textwidth=80 spell
 autocmd FileType mustache setlocal expandtab
 autocmd User Rails Rnavcommand exhibit app/exhibits --glob=**/*
