@@ -25,11 +25,12 @@ set hlsearch
 " I'm not dead-set about enabling the mouse, but it makes Xselection much
 " easier since I have 
 if has('mouse')
-	set mouse=a
+set mouse=a
 endif
 
 " Show invisibles.
-set listchars=trail:Â·,tab:â–¸\ ,eol:Â¬
+set listchars=trail:·,tab:>\ ,eol:¬
+
 set list
 
 " Some colorscheme tweaks.
