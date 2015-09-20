@@ -23,8 +23,8 @@ set noerrorbells
 set novisualbell
 
 " Show invisibles.
-"set listchars=trail:�,tab:>\ ,eol:¬
-"set list
+set listchars=trail:·,tab:▸\ ,eol:¬
+set list
 
 syntax on
 filetype plugin indent on
