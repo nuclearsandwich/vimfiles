@@ -16,13 +16,19 @@ set colorcolumn=120
 set cursorline
 set incsearch
 set hlsearch
+set lazyredraw
+set showmatch
+set mat=2
+set noerrorbells
+set novisualbell
 
 " Show invisibles.
-set listchars=trail:·,tab:▸\ ,eol:¬
-set list
+"set listchars=trail:�,tab:>\ ,eol:¬
+"set list
 
 syntax on
 filetype plugin indent on
+colorscheme desert
 
 imap jk <ESC>
 imap kj <ESC>
