@@ -26,9 +26,9 @@ set novisualbell
 set listchars=trail:·,tab:▸\ ,eol:¬
 set list
 
+colorscheme parsec
 syntax on
 filetype plugin indent on
-colorscheme desert
 
 imap jk <ESC>
 imap kj <ESC>
