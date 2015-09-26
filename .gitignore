@@ -1,4 +1,5 @@
 *.swp
 .netrwhis*
 doc/tags
+*.log
 
