@@ -97,3 +97,9 @@
 [submodule "bundle/pathogen"]
 	path = bundle/pathogen
 	url = https://github.com/tpope/vim-pathogen
+[submodule "bundle/elm"]
+	path = bundle/elm
+	url = https://github.com/ElmCast/elm-vim
+[submodule "bundle/elixir"]
+	path = bundle/elixir
+	url = https://github.com/elixir-lang/vim-elixir
