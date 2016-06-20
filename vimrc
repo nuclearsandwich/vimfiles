@@ -1,7 +1,6 @@
 runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
-set nocompatible
 set backspace=2
 set number
 set linebreak
@@ -26,7 +25,9 @@ set novisualbell
 set listchars=trail:·,tab:▸\ ,eol:¬
 set list
 
-colorscheme parsec
+if has('nvim')
+endif
+
 syntax on
 filetype plugin indent on
 
@@ -60,9 +61,6 @@ function! s:VSetSearch()
 	let @s = temp
 endfunction
 
-" Insert a arrows with Ctrl+L
-imap <c-l> <space>=><space>
-
 "autocmd BufWritePost * call system("ctags -R")
 autocmd BufRead,BufNewFile *.step set ft=ruby
 autocmd BufRead,BufNewFile *.hamlc set ft=haml
@@ -71,7 +69,4 @@ autocmd FileType ruby imap <c-l> <space>=><space>
 autocmd FileType fancy setlocal expandtab
 autocmd FileType coffee setlocal expandtab
 autocmd FileType coffee imap <c-l> <space>-><space>
-autocmd FileType markdown setlocal spell
 autocmd FileType mustache setlocal expandtab
-autocmd User Rails Rnavcommand exhibit app/exhibits --glob=**/*
-autocmd User Rails Rnavcommand template app/template --glob=**/* --suffix=.mustache
