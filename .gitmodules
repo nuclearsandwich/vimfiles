@@ -106,3 +106,15 @@
 [submodule "bundle/parsec"]
 	path = bundle/parsec
 	url = https://github.com/keith/parsec.vim
+[submodule "bundle/fish"]
+	path = bundle/fish
+	url = https://github.com/dag/vim-fish
+[submodule "bundle/elm.vim"]
+	path = bundle/elm.vim
+	url = https://github.com/lambdatoast/elm.vim
+[submodule "bundle/youcompleteme"]
+	path = bundle/youcompleteme
+	url = https://github.com/Valloric/YouCompleteMe
+[submodule "bundle/crystal"]
+	path = bundle/crystal
+	url = https://github.com/rhysd/vim-crystal
