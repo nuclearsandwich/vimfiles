@@ -1,7 +1,0 @@
-colorscheme base16-default
-set guioptions -=T
-set guioptions -=m
-set guioptions -=r
-set guifont=Anonymous:h14
-" Test for colorcolumn which is new in Vim 7.3
-set colorcolumn=80

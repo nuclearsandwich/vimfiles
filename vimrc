@@ -1,7 +1,4 @@
-runtime bundle/pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-set rtp+=~/srcbin/fzf
-
+set ttyfast
 set backspace=2
 set number
 set linebreak
@@ -12,7 +9,7 @@ set splitright
 set splitbelow
 set exrc
 set laststatus=2
-set colorcolumn=120
+set colorcolumn=80
 set cursorline
 set incsearch
 set hlsearch
@@ -21,16 +18,36 @@ set showmatch
 set mat=2
 set noerrorbells
 set novisualbell
-colorscheme anotherdark
-
-let g:EditorConfig_exec_path='/usr/bin/editorconfig'
-let g:EditorConfig_core_mode='external_command'
-
-" Show invisibles.
 set listchars=trail:·,tab:▸\ ,eol:¬
 set list
 
+
+call plug#begin('~/.vim/bundle')
+
+Plug 'https://github.com/rhysd/committia.vim'
+Plug 'https://github.com/wincent/terminus' " Terminal integration
+Plug 'editorconfig/editorconfig-vim'
+Plug 'w0rp/ale'
+
+" Language support, mostly from polyglot.
+Plug 'sheerun/vim-polyglot'
+
+" Colors and appearance.
+Plug 'https://github.com/jeffkreeftmeijer/vim-dim'
+call plug#end()
+
+colorscheme dim
+let g:EditorConfig_exec_path='/usr/bin/editorconfig'
+let g:EditorConfig_core_mode='external_command'
+" Show invisibles.
+
+
 if has('nvim')
+	if has('termguicolors')
+		set t_8f=\[[38;2;%lu;%lu;%lum
+		set t_8b=\[[48;2;%lu;%lu;%lum
+		set termguicolors
+	endif
 endif
 
 syntax on
@@ -38,22 +55,6 @@ filetype plugin indent on
 
 imap jk <ESC>
 imap kj <ESC>
-
-
-" custom functions
-cnoremap <c-x> <c-r>=<SID>PasteEscaped()<cr>
-
-function! s:PasteEscaped()
-	echo "\\".getcmdline()."\""
-	let char = getchar()
-	if char == "\<esc>"
-		return ''
-	else
-		let register_content = getreg(nr2char(char))
-		let escaped_register = escape(register_content, '\'.getcmdtype())
-		return substitute(escaped_register, '\n', '\\n', 'g')
-	endif
-endfunction
 
 xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
 xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
@@ -67,12 +68,6 @@ function! s:VSetSearch()
 	let @s = temp
 endfunction
 
-" Commentary bindings to \\\
-xmap \\  <Plug>Commentary<CR>
-nmap \\  <CR><Plug>Commentary
-nmap \\\ <Plug>CommentaryLine<CR>
-nmap \\u <Plug>CommentaryUndo<CR>
-
 "autocmd BufWritePost * call system("ctags -R")
 autocmd BufRead,BufNewFile *.step set ft=ruby
 autocmd BufRead,BufNewFile *.hamlc set ft=haml
@@ -85,4 +80,4 @@ autocmd FileType coffee imap <c-l> <space>-><space>
 autocmd FileType mustache setlocal expandtab
 
 set cursorline
-highlight CursorLine cterm=None ctermbg=black
+"highlight CursorLine cterm=None ctermbg=black
